@@ -1,0 +1,59 @@
+The system is: Linux - sh: 0: getcwd() failed: No such file or directory
+5.4.0-135-generic - sh: 0: getcwd() failed: No such file or directory
+x86_64
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8d917/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8d917.dir/build.make CMakeFiles/cmTC_8d917.dir/build
+make[1]: Entering directory '/home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8d917.dir/testCCompiler.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_8d917.dir/testCCompiler.c.o   -c /home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_8d917
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d917.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_8d917.dir/testCCompiler.c.o  -o cmTC_8d917 
+make[1]: Leaving directory '/home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20ec4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20ec4.dir/build.make CMakeFiles/cmTC_20ec4.dir/build
+make[1]: Entering directory '/home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20ec4.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_20ec4.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_20ec4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20ec4.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_20ec4.dir/CMakeCCompilerABI.c.o  -o cmTC_20ec4 
+make[1]: Leaving directory '/home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a341d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a341d.dir/build.make CMakeFiles/cmTC_a341d.dir/build
+make[1]: Entering directory '/home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a341d.dir/testCXXCompiler.cxx.o
+/usr/bin/g++     -o CMakeFiles/cmTC_a341d.dir/testCXXCompiler.cxx.o -c /home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_a341d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a341d.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_a341d.dir/testCXXCompiler.cxx.o  -o cmTC_a341d 
+make[1]: Leaving directory '/home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_82a24/fast"
+/usr/bin/make -f CMakeFiles/cmTC_82a24.dir/build.make CMakeFiles/cmTC_82a24.dir/build
+make[1]: Entering directory '/home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_82a24.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/g++     -o CMakeFiles/cmTC_82a24.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_82a24
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82a24.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_82a24.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_82a24 
+make[1]: Leaving directory '/home/taufikhidayat/kalman_filter/simple_kalman_filter/build/CMakeFiles/CMakeTmp'
+
+

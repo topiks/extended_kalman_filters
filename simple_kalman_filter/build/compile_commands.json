@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/taufikhidayat/kalman_filter/simple_kalman_filter/build",
+  "command": "/usr/bin/g++   -I/usr/include/opencv -I/home/taufikhidayat/kalman_filter/simple_kalman_filter/include    -o CMakeFiles/skf.dir/src/skf.cpp.o -c /home/taufikhidayat/kalman_filter/simple_kalman_filter/src/skf.cpp",
+  "file": "/home/taufikhidayat/kalman_filter/simple_kalman_filter/src/skf.cpp"
+}
+]

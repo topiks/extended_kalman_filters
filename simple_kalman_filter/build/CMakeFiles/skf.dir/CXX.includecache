@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/skf.h
+iostream
+-
+cmath
+-
+
+/home/taufikhidayat/kalman_filter/simple_kalman_filter/src/skf.cpp
+iostream
+-
+skf.h
+/home/taufikhidayat/kalman_filter/simple_kalman_filter/src/skf.h
+opencv2/opencv.hpp
+/home/taufikhidayat/kalman_filter/simple_kalman_filter/src/opencv2/opencv.hpp
+
