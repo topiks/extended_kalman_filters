@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="kalman_satu" type="node_kalman_satu" name="node_kalman_satu" output="screen"/>
+</launch>
