@@ -25,14 +25,10 @@ void cllbck_tim_odo_1_hz(const ros::TimerEvent& event);
 void cllbck_tim_icp_1_hz(const ros::TimerEvent& event);
 
 void draw_graph();
-void draw_true_values();
 int y_tengah(int y);
 int y_tengah_1(int y);
 
 void draw_velocity();  
-
-void kalman_filter();
-void kalman_filter_2();
 
 //==============================================================================
 
@@ -70,15 +66,7 @@ cv::Point point_vx_before = cv::Point(0, blank_velocity.rows / 2);
 
 //==============================================================================
 
-KalmanFilter kf;
-KalmanFilterType1 kf1;
-KalmanFilterType2 kf2;
-KalmanFilterType3 kf3;
-KalmanFilterType4 kf4;
-KalmanFilterType5 kf5;
 KalmanFilterType6 kf6;
-
-DataDummy dd;
 
 //==============================================================================
 
@@ -184,11 +172,6 @@ int kalman_satu_init()
 
     //===================================
 
-    // kalman_filter();
-    // draw_true_values();
-
-    //===================================
-
     // kf.init(400, 10, 0, 0.01, 50, 25);
     // kf.predict();
 
@@ -240,17 +223,6 @@ void draw_graph()
             cv::Point point_icp_now = cv::Point(odo_cnt * 2, y_tengah(icp_x));
 
             // kalman filter
-            // kf.measure(odo_x);
-            // cv::Point point_kf_now = cv::Point(odo_cnt * 10, int(y_tengah(kf.s_now)));
-            // kf.update();
-
-            // kalman filter 1
-            // kf5.update(odo_x);
-            // kf5.update(icp_x);
-
-
-            // kf6.update(odo_x);
-            // kf6.update(icp_x);
             if(odo_cnt % 10 == 0 && icp_score < 500 )
             {
                 kf6.update(icp_x, 0);
@@ -282,61 +254,9 @@ void draw_graph()
     }
 }
 
-void draw_true_values()
-{
-    for(int i = 0; i < 10; i++)
-    {
-        cv::Point point_now = cv::Point(i*50, y_tengah(dd.get_position(i)/10));
-
-        // cout << dd.get_position(i)/10 << endl;
-
-        if(i != 0)
-            cv::line(blank_true_value, point_dumm_before, point_now, cv::Scalar(0, 0, 255), 2, 8, 0);
-
-        point_dumm_before = point_now;
-
-        cv::imshow("kalman_satu_true", blank_true_value);
-        cv::waitKey(1);
-    }
-}
-
-void kalman_filter()
-{
-    int measurement[10] = {30211, 30453, 30906, 30999, 31368, 31978, 32526, 33379, 34698, 36275};
-
-    kf.init(30000, 50, 0, 5, 225, 25);
-    kf.predict();
-
-    for(int i = 0; i < 10; i++)
-    {
-        kf.measure(measurement[i]);
-        kf.update();
-        
-        cv::Point point_now = cv::Point(i*50, y_tengah(int(kf.s_now/100)));
-
-        cout << int(kf.s_now/10) << endl;
-        // cout << "kf now " << i << " " << kf.s_now << endl;
-
-        // cout point
-        // cout << point_now << endl;
-        if(i != 0)
-            cv::line(blank_true_value, point_kf_before, point_now, cv::Scalar(0, 255, 0), 2, 8, 0);
-
-        point_kf_before = point_now;
-
-        kf.predict();
-    }    
-
-}
-
-void kalman_filter_2()
-{
-
-}
-
+// untuk mengubah nilai y menjadi nilai y yang sesuai dengan ukuran gambar
 int y_tengah(int y)
 {
-    // get y tengah
     return (blank_true_value.rows) - (y);
 }
 
